@@ -1,0 +1,37 @@
+spring:
+  profiles:
+    active: development
+
+---
+spring:
+  profiles: production
+
+---
+spring:
+  profiles: test
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  datasource:
+    platform: h2
+
+---
+spring:
+  profiles: development
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  datasource:
+    platform: h2
+server:
+  use-forward-headers: true
+security:
+  user:
+    name: admin
+    password: password
