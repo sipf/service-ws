@@ -13,10 +13,14 @@ spring:
     hibernate:
       ddl-auto: create-drop
     show-sql: true
+    database: postgresql
+    generate-ddl: true
   datasource:
     url: ${JDBC_DATABASE_URL}
     username: ${JDBC_DATABASE_USERNAME}
     password: ${JDBC_DATABASE_PASSWORD}
+    platform: postgres
+    driver-class-name: org.postgresql.Driver
 security:
   user:
     name: admin
