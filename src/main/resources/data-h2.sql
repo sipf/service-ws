@@ -1,16 +1,17 @@
 
-INSERT INTO TYPE (DESCRIPTION) VALUES ('website');
-INSERT INTO TYPE (DESCRIPTION) VALUES ('webapp');
-INSERT INTO TYPE (DESCRIPTION) VALUES ('api');
-INSERT INTO TYPE (DESCRIPTION) VALUES ('mobile app');
-INSERT INTO TYPE (DESCRIPTION) VALUES ('tv app');
+INSERT INTO TYPE (ID, DESCRIPTION) VALUES (nextval('type_sequence'), 'website');
+INSERT INTO TYPE (ID, DESCRIPTION) VALUES (nextval('type_sequence'), 'webapp');
+INSERT INTO TYPE (ID, DESCRIPTION) VALUES (nextval('type_sequence'), 'api');
+INSERT INTO TYPE (ID, DESCRIPTION) VALUES (nextval('type_sequence'), 'mobile app');
+INSERT INTO TYPE (ID, DESCRIPTION) VALUES (nextval('type_sequence'), 'tv app');
 
-INSERT INTO STATUT (DESCRIPTION) VALUES ('actif');
-INSERT INTO STATUT (DESCRIPTION) VALUES ('inactif');
-INSERT INTO STATUT (DESCRIPTION) VALUES ('en validation');
+INSERT INTO STATUT (ID, DESCRIPTION) VALUES (nextval('statut_sequence'), 'actif');
+INSERT INTO STATUT (ID, DESCRIPTION) VALUES (nextval('statut_sequence'), 'inactif');
+INSERT INTO STATUT (ID, DESCRIPTION) VALUES (nextval('statut_sequence'), 'en validation');
 
-INSERT INTO SERVICE (NAME, LOGO, DESCRIPTION, LINK, DOCUMENTATION, FEE, TYPE_ID, STATUT_ID)
+INSERT INTO SERVICE (ID, NAME, LOGO, DESCRIPTION, LINK, DOCUMENTATION, FEE, TYPE_ID, STATUT_ID)
 VALUES (
+  nextval('service_sequence'),
   'net.pf',
   'https://bin.gov.pf/public/logos/no-logo.svg',
   'Le portail des services de Polynésie française permet de ...etc',
@@ -21,8 +22,9 @@ VALUES (
   1
 );
 
-INSERT INTO SERVICE (NAME, LOGO, DESCRIPTION, LINK, DOCUMENTATION, FEE, TYPE_ID, STATUT_ID)
+INSERT INTO SERVICE (ID, NAME, LOGO, DESCRIPTION, LINK, DOCUMENTATION, FEE, TYPE_ID, STATUT_ID)
 VALUES (
+  nextval('service_sequence'),
   'i-mata',
   'https://bin.gov.pf/public/logos/no-logo.svg',
   'Ce service vous permet de déposer une demande de reconnaissance auprès du Bureau de la Propriété Industrielle de la Polynésie française.',
@@ -33,8 +35,9 @@ VALUES (
   1
 );
 
-INSERT INTO SERVICE (NAME, LOGO, DESCRIPTION, LINK, DOCUMENTATION, FEE, TYPE_ID, STATUT_ID)
+INSERT INTO SERVICE (ID, NAME, LOGO, DESCRIPTION, LINK, DOCUMENTATION, FEE, TYPE_ID, STATUT_ID)
 VALUES (
+  nextval('service_sequence'),
   'turama',
   'https://bin.gov.pf/public/logos/no-logo.svg',
   'Ce service vous permet de faire traduire un texte en plusieurs langues dont celles des archipels polynésiens.',
@@ -45,8 +48,9 @@ VALUES (
   1
 );
 
-INSERT INTO SERVICE (NAME, LOGO, DESCRIPTION, LINK, DOCUMENTATION, FEE, TYPE_ID, STATUT_ID)
+INSERT INTO SERVICE (ID, NAME, LOGO, DESCRIPTION, LINK, DOCUMENTATION, FEE, TYPE_ID, STATUT_ID)
 VALUES (
+  nextval('service_sequence'),
   'paraoa',
   'https://bin.gov.pf/public/logos/no-logo.svg',
   'Ce service vous permet d’obtenir en ligne une autorisation d’approcher les mammiferes marins.',
@@ -57,8 +61,9 @@ VALUES (
   1
 );
 
-INSERT INTO SERVICE (NAME, LOGO, DESCRIPTION, LINK, DOCUMENTATION, FEE, TYPE_ID, STATUT_ID)
+INSERT INTO SERVICE (ID, NAME, LOGO, DESCRIPTION, LINK, DOCUMENTATION, FEE, TYPE_ID, STATUT_ID)
 VALUES (
+  nextval('service_sequence'),
   'tefenua',
   'https://bin.gov.pf/public/logos/no-logo.svg',
   'Ce service vous permet d’accéder à l’ensemble de l’information géographique produite par les services de l’administration ainsi que des outils de géolocalisation, d’information, d’itinéraire, de dessin, de partage et l’interaction.',
@@ -69,8 +74,9 @@ VALUES (
   1
 );
 
-INSERT INTO SERVICE (NAME, LOGO, DESCRIPTION, LINK, DOCUMENTATION, FEE, TYPE_ID, STATUT_ID)
+INSERT INTO SERVICE (ID, NAME, LOGO, DESCRIPTION, LINK, DOCUMENTATION, FEE, TYPE_ID, STATUT_ID)
 VALUES (
+  nextval('service_sequence'),
   'otia',
   'https://bin.gov.pf/public/logos/no-logo.svg',
   'Ce service vous permet de consulter le cadastre numérique et rechercher, commander et régler un extrait de plan cadastral, sera ouvert au public courant décembre.',
@@ -81,8 +87,9 @@ VALUES (
   1
 );
 
-INSERT INTO SERVICE (NAME, LOGO, DESCRIPTION, LINK, DOCUMENTATION, FEE, TYPE_ID, STATUT_ID)
+INSERT INTO SERVICE (ID, NAME, LOGO, DESCRIPTION, LINK, DOCUMENTATION, FEE, TYPE_ID, STATUT_ID)
 VALUES (
+  nextval('service_sequence'),
   'i-sav',
   'https://bin.gov.pf/public/logos/no-logo.svg',
   'Ce service vous permet d’interroger la situation administrative des véhicules.',
